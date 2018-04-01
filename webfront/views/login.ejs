@@ -55,13 +55,20 @@
 
                         <div class="panel-heading heading-border bg-white">
                             <div class="section row mn">
-                                
-                                <div class="col-sm-12">
-                                    <a href="#" class="button btn-social twitter mr5 btn-block" style="font-size: 24px;">
-                                        
-                                        </span>webFront</a>
-                                </div>
-                                
+
+                                <% if (typeof errorMsg == 'undefined' || errorMsg == '') { %>
+	                                <div class="col-sm-12">
+	                                    <a href="javascript:void(0);" class="button btn-social twitter mr5 btn-block" style="font-size: 24px;">
+	                                        webFront
+	                                    </a>
+	                                </div>
+								<% } else { %>
+	                                <div class="col-sm-12">
+	                                    <a id="errorMsg" href="javascript:void(0);" class="button btn-social googleplus  btn-block" style="font-size: 24px;">
+	                                        <%= errorMsg %>
+	                                    </a>
+	                                </div>
+                                <% } %>
                             </div>
                         </div>
 
